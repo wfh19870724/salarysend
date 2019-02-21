@@ -229,6 +229,9 @@ public class SendEmail {
 
                 for (int i =1 ;i<list.size();i++){
                     String[] info = list.get(i).split(",");
+                    if(null==info||info.length==0){
+                        continue;
+                    }
                     StringBuilder text = new StringBuilder();
                     text.append(sb.toString()).append("<tr>");
                     for(int j = 0;j<info.length-1;j++){
